@@ -1,0 +1,18 @@
+@import '../variables';
+a{
+  text-decoration: none;
+}
+
+.display-card{
+  background-color: $background-dark;
+  border-radius: $radius-size*4;
+  margin-bottom: $leading;
+  padding: $leading;
+
+h2{
+  padding-top:0;
+  padding-bottom: 0;
+  color: $primary-light;
+  text-decoration: none;
+}
+}

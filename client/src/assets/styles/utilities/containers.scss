@@ -1,0 +1,130 @@
+@import "../variables";
+
+#root {
+  background: $background-light;
+  min-height: 100%;
+}
+
+.hero {
+  background-color: $background-dark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: -webkit-fill-available;
+  width: 100vw;
+}
+
+li{
+  list-style-type: none
+}
+
+@mixin flex($flow) {
+  display: flex;
+  flex-flow: $flow;
+
+  @if $flow == 'row wrap' {
+
+  } @else if $flow == 'column' {
+    align-items: normal;
+  } @else {
+
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+
+  &-row {
+    @include flex(row wrap);
+  }
+
+  &-col {
+    @include flex(column);
+  }
+}
+
+[class*="-nowrap"] {
+  flex-wrap: nowrap
+}
+
+[class*="-reverse"] {
+  flex-direction: row-reverse
+}
+
+[class*="align-start"] {
+  align-items: flex-start
+}
+
+[class*="align-center"] {
+  align-items: center
+}
+
+[class*="align-end"] {
+  align-items: flex-end
+}
+
+[class*="align-stretch"] {
+  align-items: stretch
+}
+
+
+[class*="justify-start"] {
+  justify-content: flex-end
+}
+
+[class*="justify-center"] {
+  justify-content: center
+}
+
+[class*="justify-end"] {
+  justify-content: flex-end
+}
+
+[class*="space-between"] {
+  justify-content: space-between;
+}
+
+[class*="space-around"] {
+  justify-content: space-around
+}
+
+[class*="grow"] {
+  flex: 1
+}
+
+[class*="first"] {
+  order: -1
+}
+
+[class*="last"] {
+  order: 1
+}
+
+.container, .nav-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 920pt;
+  padding: 0 $base-padding;
+  box-sizing: border-box;
+}
+
+.med {
+  margin: 0 auto;
+  width: 66%;
+  max-width: 640pt;
+}
+
+body .container:last-of-type {
+  padding-bottom: 50px;
+}
+
+.margin-top{
+  margin-top: $leading;
+}
+@media screen and (max-width: $mobile) {
+  .med {
+    width: 100%;
+  }
+}

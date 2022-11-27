@@ -1,0 +1,50 @@
+@mixin text-size($size) {
+  font-size: $base_font_size*$size;
+  line-height: $base_line_height*$size;
+}
+
+.logo-text {
+  @include text-size(4);
+  font-weight: bold;
+  color: $background-light;
+}
+
+.page-title{
+  @include text-size(2);
+  font-weight: bold;
+  color: $primary-light;
+}
+
+.page-subtitle{
+  @include text-size(1.62);
+  font-weight: bold;
+  color: $primary-light;
+}
+
+p{
+  color: $text-color-default;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon-huge {
+  text-align: center;
+  font-size: 200pt;
+  color: $background-light;
+}
+
+@media screen and (max-width: $mobile) {
+  .icon-huge {
+    font-size: 120pt;
+  }
+}
+
+label {
+  //text-transform: uppercase;
+  font-size: 10pt;
+ // opacity: 0.35;
+  font-weight: bolder;
+}
+

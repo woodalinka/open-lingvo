@@ -1,0 +1,21 @@
+@import "../variables";
+
+.containerStyles {
+    height: 20px;
+    width: 100%;
+    background: #e0e0de;
+    border-radius: 8px;
+}
+
+.fillerStyles {
+    height: 100%;
+    background: #e0e0de;
+    border-radius: inherit;
+    text-align: right
+}
+
+.labelStyles {
+    padding: 5px;
+    color: $background-light;
+    font-weight: bold;
+}

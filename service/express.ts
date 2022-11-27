@@ -1,10 +1,20 @@
+import { LangResponse } from "./interface/langResponse";
+
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
-app.get("/", async (_req: any, res: any): Promise<any> => {
-  return res.status(200).send({
-    message: "Hello World!",
-  });
+const corsOptions = {
+  origin: ["http://localhost:8080"],
+};
+
+app.use(cors(corsOptions));
+
+app.get("/language", async (_req: any, res: any): Promise<any> => {
+  const langResponse: LangResponse = {
+    availableLang: ["English", "Russian", "German"],
+  };
+  return res.status(200).send(langResponse);
 });
 
 const PORT = 3000;

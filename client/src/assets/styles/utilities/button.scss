@@ -1,0 +1,35 @@
+
+
+input[type=text],input[type=email],input[type=password], textarea, input[type=submit], button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: $radius-size;
+  background: $pill-color;
+  display: inline-block;
+  padding: 4px $base-padding;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+button {
+  width: auto;
+  &.primary {
+    background-color: $primary-light;
+    color: $background-light;
+  }
+  &.wide {
+  width: 100%;
+}
+
+  &:disabled {
+    background-color: lightgrey;
+    color: grey;
+    pointer-events: none;
+  }
+}
+
+input[type=submit]:hover, button:hover {
+  background: $primary-dark;
+  cursor: pointer;
+}

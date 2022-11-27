@@ -1,0 +1,130 @@
+//@import "utilities/Navigation";
+//@import "utilities/Dropdown";
+//@import "utilities/text";
+//@import "utilities/button";
+@import "variables";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.02em;
+  font-family: 'DM Sans', sans-serif;
+}
+
+ul {
+  margin-left: $leading;
+}
+
+body, p, textarea, input, button {
+  font-size: $base_font_size;
+}
+
+p, textarea, input, button, ul {
+  margin-bottom: calc($leading / 2);
+  line-height: $leading;
+}
+
+body, html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+html {
+  //background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .18) 1px, transparent 1px);
+  //background-position: left top;
+  //background-repeat: repeat;
+  //background-size: 100% $base_line_height;
+}
+
+
+.navbar ~ .hero {
+  position: relative;
+  height: calc(100vh - 50px);
+}
+
+.navbar ~ .hero.with-footer {
+  position: relative;
+  height: calc(100vh - 100px);
+}
+
+
+h1, h2, h3, h4 {
+  padding-top: $leading;
+  padding-bottom: calc($leading / 2);
+  font-weight: 500;
+}
+
+
+.node {
+  width: 200px;
+  display: inline-block;
+  background: rgba(5, 5, 5, 0.42);
+  position: absolute;
+}
+
+div#window-all > div {
+  margin-right: auto;
+}
+
+
+.labl {
+  display: block;
+  width: 100%;
+}
+
+.labl > input { /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+.labl > input + div { /* DIV STYLES */
+  cursor: pointer;
+  border: 1px solid #dddddd;
+  background-color: #f5f5f5;
+  color: #444;
+  border-radius: 8px;
+  margin-bottom: $base_line_height;
+  padding: $base-padding;
+  font-size: $base_font_size*1.62;
+  font-weight: 400;
+}
+
+
+.labl > input:checked { /* (RADIO CHECKED) DIV STYLES */
+
+  + div {
+    background-color: #fff9f0;
+    border: 1px solid #ffc853;
+    color: #e37d00;
+  }
+
+}
+
+.labl > input {
+
+  &.error + div {
+    background-color: #fff0f0;
+    border: 1px solid #ff5353;
+    color: #e30000;
+  }
+
+  &.success + div {
+    background-color: #f4fff0;
+    border: 1px solid #88e32c;
+    color: #62ba00;
+  }
+
+}
+
+#lesson-progress-bar {
+  height: $leading;
+}
+
+@import "themes/dark";

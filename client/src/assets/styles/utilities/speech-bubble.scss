@@ -1,0 +1,43 @@
+@import "../variables.scss";
+
+.speech-bubble {
+  position: relative;
+  padding: 15px;
+  // margin: 100px 0 0.5em;
+  margin-top: 14pt;
+  margin-bottom: $leading;
+  color: $primary-dark;
+  background: $background-dark;
+  -webkit-border-radius: $radius-size;
+  -moz-border-radius: $radius-size;
+  border-radius: $radius-size;
+
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-size: $base_font_size*1.62;
+    font-weight: 600;
+  }
+
+  i {
+    position: relative;
+    top: 1px;
+    color: #7c99af;
+
+    &:hover {
+      color: #4b6774;
+      cursor: pointer;
+    }
+  }
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50px;
+  border: 15px solid transparent;
+  border-bottom-color: $background-dark;
+  display: block;
+  width: 0;
+}

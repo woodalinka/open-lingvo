@@ -1,0 +1,42 @@
+@import "../variables";
+
+.selective-list-item{
+  border-radius: $radius-size;
+  margin-top: $leading;
+  padding: $leading/2;
+  border: 2px solid $background-dark;
+  background-color: $background-dark;
+  position: relative;
+
+  .floating-icons{
+    position: absolute;
+    right: $leading/4;
+    top: $leading/4;
+    font-size: 162%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: $radius-size/2;
+    color: $background-light;
+  }
+
+&.selected{
+  border: 2px solid $primary-light;
+  background-color: $primary-light;
+  color: $background-light;
+
+  .floating-icons{
+    color: $background-light;
+  }
+}
+
+  &.correct-option {
+    background-color: green;
+  }
+
+  &.wrong-option {
+    background-color: red;
+  }
+
+}
+
+
+
